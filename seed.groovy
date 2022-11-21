@@ -43,7 +43,7 @@ pipelineJob('jobdsltest_pipeline') {
     }
     definition {
         cps {
-            script(readFileFromWorkspace('groovy_scripts/pipeline.groovy'))
+            script(readFileFromWorkspace('groovy_jobs/pipeline.groovy'))
             sandbox()
         }
     }
