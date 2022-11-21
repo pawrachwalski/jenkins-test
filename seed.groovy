@@ -24,7 +24,6 @@ freeStyleJob('jobdsltest_freestyle_job') {
        wrappers {
            preBuildCleanup()
            timestamps()
-           colorizeOutput('xterm')
         }
        steps {
            shell('echo "Hello from freestylejob"')
@@ -44,7 +43,7 @@ pipelineJob('jobdsltest_pipeline') {
     }
     definition {
         cps {
-            script(readFileFromWorkspace('groovy_scripts/tool_mailman.groovy'))
+            script(readFileFromWorkspace('groovy_scripts/pipeline.groovy'))
             sandbox()
         }
     }
