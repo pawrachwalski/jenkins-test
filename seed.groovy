@@ -27,7 +27,7 @@ freeStyleJob('jobdsltest_freestyle_job') {
            colorizeOutput('xterm')
         }
        steps {
-           sh 'echo "Hello from freestylejob"'
+           shell('echo "Hello from freestylejob"')
        }
        publishers {
            wsCleanup()
@@ -35,12 +35,12 @@ freeStyleJob('jobdsltest_freestyle_job') {
 }
 
 pipelineJob('jobdsltest_pipeline') {
-    description(readFileFromWorkspace('messages/tool_mailman.msg'))
+    description('BLABLA')
     logRotator {
       daysToKeep(7)
     }
     triggers {
-      cron('H 17 * * 1-5')
+      cron('@daily')
     }
     definition {
         cps {
