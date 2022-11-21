@@ -1,4 +1,4 @@
-def names = [ "number1, number2, number3"]
+def names = [ "number1", "number2", "number3"]
 
 names.each{jobname->
 pipelineJob("jobdsltest_pipeline_$jobname") {
