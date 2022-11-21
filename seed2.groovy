@@ -11,7 +11,7 @@ pipelineJob("jobdsltest_pipeline_$jobname") {
     }
     definition {
         cps {
-            script(readFileFromWorkspace('groovy_jobs/tool_mailman.groovy'))
+            script(readFileFromWorkspace('groovy_jobs/pipeline.groovy'))
             sandbox()
         }
     }
